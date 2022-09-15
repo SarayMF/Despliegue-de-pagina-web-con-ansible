@@ -1,0 +1,7 @@
+---
+mysql_root_password: " "
+app_user: "saray"
+http_host: "ventasmadrigal.com"
+http_conf: "ventasmadrigal.com.conf"
+http_port: "80"
+disable_default: true

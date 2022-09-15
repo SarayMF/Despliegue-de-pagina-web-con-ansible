@@ -1,0 +1,14 @@
+- hosts: all
+  become: true
+
+  tasks:
+    - name: create a new database
+      mysql_db: name=ventas state=present login_user=root login_password=" "
+
+    - name: add sample data to database
+      copy: src=db_schema.sql dest=/tmp/db_schema.sql
+
+    - name: insert sample data into database
+      mysql_db: name=ventas state=import target=/tmp/db_schema.sql login_user=root login_password=" "
+        
+
